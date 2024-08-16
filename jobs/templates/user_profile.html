@@ -1,0 +1,10 @@
+<h1>{{ profile_type }} Profile</h1>
+{% if profile_type == 'Job Seeker' %} 
+    <p>Name: {{ profile.name }}</p>
+    <p>Email: {{ profile.email }}</p>
+    <p>Resume: <a href="{{ profile.resume.url }}">Download</a></p>
+ {% elif profile_type == 'Company' %} 
+    <p>Company Name: {{ profile.company_name }}</p>
+    <p>Email: {{ profile.email }}</p>
+    <p>Website: {{ profile.website }}</p>
+{% endif %} 

@@ -1,0 +1,7 @@
+<h2>Job Seeker Dashboard</h2>
+<p>
+    {% for job in jobs %}
+    <li>{{ job.title }}
+    <a href="{% url 'apply_for_job' job.company %}">Apply</a></li>
+    {% endfor %}
+    </p>

@@ -1,0 +1,8 @@
+<h2>Company Dashboard</h2>
+<a href="{% url 'post_job' %}">Post a Job</a>
+<ul>
+    {% for job in jobs %}
+        <li>{{ job.title }}</li>
+        <a href="{% url 'comp_delete' company.pk %}">Delete</a>
+    {% endfor %}
+</ul>
